@@ -1,4 +1,4 @@
-FROM luiszbm/codenarc
+FROM luiszbm/codenarc:2.0.0
 
 ENV REVIEWDOG_VERSION=v0.11.0
 
