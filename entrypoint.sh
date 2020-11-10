@@ -9,7 +9,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
 codenarc -report=inlineConsole:stdout \
   | reviewdog -efm="%f:%l:%m" \
-      -name="linter-name (codenarc)" \
+      -name="codenarc" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
