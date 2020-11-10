@@ -11,7 +11,7 @@ USER root
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \
-    apt-get install -y git \
+    apt-get install -y git && \
     apt-get clean && rm -rf /var/lib/apt/lists/* 
 
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
