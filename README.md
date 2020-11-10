@@ -41,10 +41,6 @@ inputs:
   reviewdog_flags:
     description: 'Additional reviewdog flags'
     default: ''
-  ### Flags for <linter-name> ###
-  locale:
-    description: '-locale flag of misspell. (US/UK)'
-    default: ''
 ```
 
 ## Usage
@@ -56,7 +52,7 @@ on: [pull_request]
 jobs:
   # TODO: change `linter_name`.
   linter_name:
-    name: runner / <linter-name>
+    name: runner / codenarc
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
