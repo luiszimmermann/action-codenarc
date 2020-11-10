@@ -9,6 +9,7 @@ ENV HOME_JARS=/home/groovy/*
 
 USER root
 
+RUN apt install git
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
 
 USER groovy
